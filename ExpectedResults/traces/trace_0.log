@@ -1,0 +1,100 @@
+0, void <init>(), myClasses.TestB, specialinvoke this.<java.lang.Object: void <init>()>():LINENO:7:FILE:myClasses.TestB:PRED:[]:SUCC:[1 (FLOW_EDGE)]:TID:1
+1, void <init>(), myClasses.TestB, return:LINENO:7:FILE:myClasses.TestB:PRED:[0 (FLOW_EDGE)]:SUCC:[]:TID:1
+2, void testsB(), myClasses.TestB, $stack3 = new myClasses.A:LINENO:11:FILE:myClasses.TestB:PRED:[]:SUCC:[3 (FLOW_EDGE)]:TID:1
+3, void testsB(), myClasses.TestB, specialinvoke $stack3.<myClasses.A: void <init>()>():LINENO:11:FILE:myClasses.TestB:PRED:[2 (FLOW_EDGE)]:SUCC:[4 (CALL_EDGE), 11 (FLOW_EDGE)]:TID:1
+4, void <init>(), myClasses.A, specialinvoke this.<java.lang.Object: void <init>()>():LINENO:3:FILE:myClasses.A:PRED:[3 (CALL_EDGE)]:SUCC:[5 (FLOW_EDGE)]:TID:1
+5, void <init>(), myClasses.A, $stack1 = new myClasses.B:LINENO:5:FILE:myClasses.A:PRED:[4 (FLOW_EDGE)]:SUCC:[6 (FLOW_EDGE)]:TID:1
+6, void <init>(), myClasses.A, specialinvoke $stack1.<myClasses.B: void <init>()>():LINENO:5:FILE:myClasses.A:PRED:[5 (FLOW_EDGE)]:SUCC:[7 (CALL_EDGE)]:TID:1
+7, void <init>(), myClasses.B, specialinvoke this.<java.lang.Object: void <init>()>():LINENO:3:FILE:myClasses.B:PRED:[6 (CALL_EDGE)]:SUCC:[8 (FLOW_EDGE), 9 (CALL_EDGE)]:TID:1
+8, void <init>(), myClasses.B, return:LINENO:3:FILE:myClasses.B:PRED:[7 (FLOW_EDGE)]:SUCC:[]:TID:1
+9, void <init>(), myClasses.A, this.<myClasses.A: myClasses.B b> = $stack1:FIELD:422250493:LINENO:5:FILE:myClasses.A:PRED:[7 (CALL_EDGE)]:SUCC:[10 (FLOW_EDGE)]:TID:1
+10, void <init>(), myClasses.A, return:LINENO:5:FILE:myClasses.A:PRED:[9 (FLOW_EDGE)]:SUCC:[]:TID:1
+11, void testsB(), myClasses.TestB, $stack4 = virtualinvoke $stack3.<myClasses.A: int printAandB()>():LINENO:12:FILE:myClasses.TestB:PRED:[3 (FLOW_EDGE)]:SUCC:[97 (FLOW_EDGE), 12 (CALL_EDGE)]:TID:1
+12, int printAandB(), myClasses.A, $stack2 = <java.lang.System: java.io.PrintStream out>:LINENO:8:FILE:myClasses.A:PRED:[11 (CALL_EDGE)]:SUCC:[13 (FLOW_EDGE)]:TID:1
+13, int printAandB(), myClasses.A, virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is A"):LINENO:8:FILE:myClasses.A:PRED:[12 (FLOW_EDGE)]:SUCC:[14 (FLOW_EDGE)]:TID:1
+14, int printAandB(), myClasses.A, i = 0:LINENO:10:FILE:myClasses.A:PRED:[13 (FLOW_EDGE)]:SUCC:[15 (FLOW_EDGE)]:TID:1
+15, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[14 (FLOW_EDGE)]:SUCC:[16 (FLOW_EDGE)]:TID:1
+16, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[15 (FLOW_EDGE)]:SUCC:[17 (FLOW_EDGE)]:TID:1
+17, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[16 (FLOW_EDGE)]:SUCC:[18 (CALL_EDGE), 21 (FLOW_EDGE)]:TID:1
+18, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[17 (CALL_EDGE)]:SUCC:[19 (FLOW_EDGE)]:TID:1
+19, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[18 (FLOW_EDGE)]:SUCC:[20 (FLOW_EDGE)]:TID:1
+20, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[19 (FLOW_EDGE)]:SUCC:[]:TID:1
+21, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[17 (FLOW_EDGE)]:SUCC:[22 (FLOW_EDGE)]:TID:1
+22, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[21 (FLOW_EDGE)]:SUCC:[23 (FLOW_EDGE)]:TID:1
+23, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[22 (FLOW_EDGE)]:SUCC:[24 (FLOW_EDGE)]:TID:1
+24, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[23 (FLOW_EDGE)]:SUCC:[25 (FLOW_EDGE)]:TID:1
+25, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[24 (FLOW_EDGE)]:SUCC:[26 (CALL_EDGE), 29 (FLOW_EDGE)]:TID:1
+26, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[25 (CALL_EDGE)]:SUCC:[27 (FLOW_EDGE)]:TID:1
+27, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[26 (FLOW_EDGE)]:SUCC:[28 (FLOW_EDGE)]:TID:1
+28, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[27 (FLOW_EDGE)]:SUCC:[]:TID:1
+29, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[25 (FLOW_EDGE)]:SUCC:[30 (FLOW_EDGE)]:TID:1
+30, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[29 (FLOW_EDGE)]:SUCC:[31 (FLOW_EDGE)]:TID:1
+31, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[30 (FLOW_EDGE)]:SUCC:[32 (FLOW_EDGE)]:TID:1
+32, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[31 (FLOW_EDGE)]:SUCC:[33 (FLOW_EDGE)]:TID:1
+33, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[32 (FLOW_EDGE)]:SUCC:[34 (CALL_EDGE), 37 (FLOW_EDGE)]:TID:1
+34, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[33 (CALL_EDGE)]:SUCC:[35 (FLOW_EDGE)]:TID:1
+35, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[34 (FLOW_EDGE)]:SUCC:[36 (FLOW_EDGE)]:TID:1
+36, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[35 (FLOW_EDGE)]:SUCC:[]:TID:1
+37, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[33 (FLOW_EDGE)]:SUCC:[38 (FLOW_EDGE)]:TID:1
+38, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[37 (FLOW_EDGE)]:SUCC:[39 (FLOW_EDGE)]:TID:1
+39, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[38 (FLOW_EDGE)]:SUCC:[40 (FLOW_EDGE)]:TID:1
+40, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[39 (FLOW_EDGE)]:SUCC:[41 (FLOW_EDGE)]:TID:1
+41, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[40 (FLOW_EDGE)]:SUCC:[42 (CALL_EDGE), 45 (FLOW_EDGE)]:TID:1
+42, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[41 (CALL_EDGE)]:SUCC:[43 (FLOW_EDGE)]:TID:1
+43, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[42 (FLOW_EDGE)]:SUCC:[44 (FLOW_EDGE)]:TID:1
+44, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[43 (FLOW_EDGE)]:SUCC:[]:TID:1
+45, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[41 (FLOW_EDGE)]:SUCC:[46 (FLOW_EDGE)]:TID:1
+46, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[45 (FLOW_EDGE)]:SUCC:[47 (FLOW_EDGE)]:TID:1
+47, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[46 (FLOW_EDGE)]:SUCC:[48 (FLOW_EDGE)]:TID:1
+48, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[47 (FLOW_EDGE)]:SUCC:[49 (FLOW_EDGE)]:TID:1
+49, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[48 (FLOW_EDGE)]:SUCC:[50 (CALL_EDGE), 53 (FLOW_EDGE)]:TID:1
+50, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[49 (CALL_EDGE)]:SUCC:[51 (FLOW_EDGE)]:TID:1
+51, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[50 (FLOW_EDGE)]:SUCC:[52 (FLOW_EDGE)]:TID:1
+52, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[51 (FLOW_EDGE)]:SUCC:[]:TID:1
+53, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[49 (FLOW_EDGE)]:SUCC:[54 (FLOW_EDGE)]:TID:1
+54, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[53 (FLOW_EDGE)]:SUCC:[55 (FLOW_EDGE)]:TID:1
+55, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[54 (FLOW_EDGE)]:SUCC:[56 (FLOW_EDGE)]:TID:1
+56, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[55 (FLOW_EDGE)]:SUCC:[57 (FLOW_EDGE)]:TID:1
+57, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[56 (FLOW_EDGE)]:SUCC:[58 (CALL_EDGE), 61 (FLOW_EDGE)]:TID:1
+58, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[57 (CALL_EDGE)]:SUCC:[59 (FLOW_EDGE)]:TID:1
+59, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[58 (FLOW_EDGE)]:SUCC:[60 (FLOW_EDGE)]:TID:1
+60, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[59 (FLOW_EDGE)]:SUCC:[]:TID:1
+61, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[57 (FLOW_EDGE)]:SUCC:[62 (FLOW_EDGE)]:TID:1
+62, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[61 (FLOW_EDGE)]:SUCC:[63 (FLOW_EDGE)]:TID:1
+63, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[62 (FLOW_EDGE)]:SUCC:[64 (FLOW_EDGE)]:TID:1
+64, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[63 (FLOW_EDGE)]:SUCC:[65 (FLOW_EDGE)]:TID:1
+65, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[64 (FLOW_EDGE)]:SUCC:[66 (CALL_EDGE), 69 (FLOW_EDGE)]:TID:1
+66, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[65 (CALL_EDGE)]:SUCC:[67 (FLOW_EDGE)]:TID:1
+67, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[66 (FLOW_EDGE)]:SUCC:[68 (FLOW_EDGE)]:TID:1
+68, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[67 (FLOW_EDGE)]:SUCC:[]:TID:1
+69, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[65 (FLOW_EDGE)]:SUCC:[70 (FLOW_EDGE)]:TID:1
+70, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[69 (FLOW_EDGE)]:SUCC:[71 (FLOW_EDGE)]:TID:1
+71, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[70 (FLOW_EDGE)]:SUCC:[72 (FLOW_EDGE)]:TID:1
+72, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[71 (FLOW_EDGE)]:SUCC:[73 (FLOW_EDGE)]:TID:1
+73, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[72 (FLOW_EDGE)]:SUCC:[74 (CALL_EDGE), 77 (FLOW_EDGE)]:TID:1
+74, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[73 (CALL_EDGE)]:SUCC:[75 (FLOW_EDGE)]:TID:1
+75, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[74 (FLOW_EDGE)]:SUCC:[76 (FLOW_EDGE)]:TID:1
+76, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[75 (FLOW_EDGE)]:SUCC:[]:TID:1
+77, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[73 (FLOW_EDGE)]:SUCC:[78 (FLOW_EDGE)]:TID:1
+78, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[77 (FLOW_EDGE)]:SUCC:[79 (FLOW_EDGE)]:TID:1
+79, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[78 (FLOW_EDGE)]:SUCC:[80 (FLOW_EDGE)]:TID:1
+80, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[79 (FLOW_EDGE)]:SUCC:[81 (FLOW_EDGE)]:TID:1
+81, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[80 (FLOW_EDGE)]:SUCC:[82 (CALL_EDGE), 85 (FLOW_EDGE)]:TID:1
+82, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[81 (CALL_EDGE)]:SUCC:[83 (FLOW_EDGE)]:TID:1
+83, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[82 (FLOW_EDGE)]:SUCC:[84 (FLOW_EDGE)]:TID:1
+84, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[83 (FLOW_EDGE)]:SUCC:[]:TID:1
+85, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[81 (FLOW_EDGE)]:SUCC:[86 (FLOW_EDGE)]:TID:1
+86, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[85 (FLOW_EDGE)]:SUCC:[87 (FLOW_EDGE)]:TID:1
+87, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[86 (FLOW_EDGE)]:SUCC:[88 (FLOW_EDGE)]:TID:1
+88, int printAandB(), myClasses.A, $stack3 = this.<myClasses.A: myClasses.B b>:FIELD:422250493:LINENO:11:FILE:myClasses.A:PRED:[87 (FLOW_EDGE)]:SUCC:[89 (FLOW_EDGE)]:TID:1
+89, int printAandB(), myClasses.A, virtualinvoke $stack3.<myClasses.B: int print()>():LINENO:11:FILE:myClasses.A:PRED:[88 (FLOW_EDGE)]:SUCC:[90 (CALL_EDGE), 93 (FLOW_EDGE)]:TID:1
+90, int print(), myClasses.B, $stack1 = <java.lang.System: java.io.PrintStream out>:LINENO:5:FILE:myClasses.B:PRED:[89 (CALL_EDGE)]:SUCC:[91 (FLOW_EDGE)]:TID:1
+91, int print(), myClasses.B, virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi; this is B"):LINENO:5:FILE:myClasses.B:PRED:[90 (FLOW_EDGE)]:SUCC:[92 (FLOW_EDGE)]:TID:1
+92, int print(), myClasses.B, return 0:LINENO:6:FILE:myClasses.B:PRED:[91 (FLOW_EDGE)]:SUCC:[]:TID:1
+93, int printAandB(), myClasses.A, i = i + 1:LINENO:10:FILE:myClasses.A:PRED:[89 (FLOW_EDGE)]:SUCC:[94 (FLOW_EDGE)]:TID:1
+94, int printAandB(), myClasses.A, goto [?= (branch)]:LINENO:10:FILE:myClasses.A:PRED:[93 (FLOW_EDGE)]:SUCC:[95 (FLOW_EDGE)]:TID:1
+95, int printAandB(), myClasses.A, if i >= 10 goto return 0:LINENO:10:FILE:myClasses.A:PRED:[94 (FLOW_EDGE)]:SUCC:[96 (FLOW_EDGE)]:TID:1
+96, int printAandB(), myClasses.A, return 0:LINENO:13:FILE:myClasses.A:PRED:[95 (FLOW_EDGE)]:SUCC:[]:TID:1
+97, void testsB(), myClasses.TestB, $stack5 = (long) $stack4:LINENO:13:FILE:myClasses.TestB:PRED:[11 (FLOW_EDGE)]:SUCC:[98 (FLOW_EDGE)]:TID:1
+98, void testsB(), myClasses.TestB, staticinvoke <org.junit.Assert: void assertEquals(long;long)>(0L; $stack5):LINENO:13:FILE:myClasses.TestB:PRED:[97 (FLOW_EDGE)]:SUCC:[99 (FLOW_EDGE)]:TID:1
+99, void testsB(), myClasses.TestB, return:LINENO:14:FILE:myClasses.TestB:PRED:[98 (FLOW_EDGE)]:SUCC:[]:TID:1

@@ -1,0 +1,52 @@
+public class myClasses.A extends java.lang.Object
+{
+    private myClasses.B b;
+
+    public void <init>()
+    {
+        myClasses.A this;
+        myClasses.B $stack1;
+
+        this := @this: myClasses.A;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        $stack1 = new myClasses.B;
+
+        specialinvoke $stack1.<myClasses.B: void <init>()>();
+
+        this.<myClasses.A: myClasses.B b> = $stack1;
+
+        return;
+    }
+
+    public int printAandB()
+    {
+        java.io.PrintStream $stack2;
+        myClasses.A this;
+        myClasses.B $stack3;
+        int i;
+
+        this := @this: myClasses.A;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>("Hi, this is A");
+
+        i = 0;
+
+     label1:
+        if i >= 10 goto label2;
+
+        $stack3 = this.<myClasses.A: myClasses.B b>;
+
+        virtualinvoke $stack3.<myClasses.B: int print()>();
+
+        i = i + 1;
+
+        goto label1;
+
+     label2:
+        return 0;
+    }
+}

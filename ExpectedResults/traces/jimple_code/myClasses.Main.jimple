@@ -1,0 +1,28 @@
+public class myClasses.Main extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        myClasses.Main this;
+
+        this := @this: myClasses.Main;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        myClasses.A $stack2;
+        java.lang.String[] args;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack2 = new myClasses.A;
+
+        specialinvoke $stack2.<myClasses.A: void <init>()>();
+
+        return;
+    }
+}

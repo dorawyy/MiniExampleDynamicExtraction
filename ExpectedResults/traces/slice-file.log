@@ -1,0 +1,34 @@
+usage: java -jar Slicer4j/target/slicer4j-jar-with-dependencies.jar
+ -ctrl,--Control-only                 Track control dependence only
+ -d,--debug                           Enable debug
+ -data,--data-only                    Track data-flow dependence only
+ -f,--framework <arg>                 Path to folder with extra framework
+                                      methods
+ -fw,--forward-slice-position <arg>   starting statement for the forward
+                                      slice (for chopping)
+ -h,--help                            Display this help and exit
+ -j,--jar <arg>                       jar path
+ -lc,--logger-classes <arg>           logger classes jar
+ -m,--mode <arg>                      Tool mode: i for instrument, g to
+                                      produce the dynamic control flow
+                                      graph, s to slice
+ -o,--outDir <arg>                    Output directory
+ -once,--once                         Slice one step only
+ -sd,--stub-droid <arg>               Location of the StubDroid summaries
+ -sl,--static-log <arg>               Static-log file path
+ -sp,--slice-position <arg>           starting statement for the slice
+ -sv,--slice-variables <arg>          dash-joined list of starting
+                                      variables to slice from
+ -t,--trace <arg>                     Execution trace
+ -tw,--taint-wrapper <arg>            Location of the FlowDroid's
+                                      taint-wrapper list
+Exception in thread "main" ca.ubc.ece.resess.slicer.dynamic.core.exceptions.InvalidCommandsException: Invalid commands
+	at ca.ubc.ece.resess.slicer.dynamic.slicer4j.CommandParser.parse(CommandParser.java:75)
+	at ca.ubc.ece.resess.slicer.dynamic.slicer4j.Slicer.main(Slicer.java:226)
+Caused by: org.apache.commons.cli.MissingArgumentException: Missing argument for option: sp
+	at org.apache.commons.cli.DefaultParser.checkRequiredArgs(DefaultParser.java:211)
+	at org.apache.commons.cli.DefaultParser.parse(DefaultParser.java:125)
+	at org.apache.commons.cli.DefaultParser.parse(DefaultParser.java:76)
+	at org.apache.commons.cli.DefaultParser.parse(DefaultParser.java:60)
+	at ca.ubc.ece.resess.slicer.dynamic.slicer4j.CommandParser.parse(CommandParser.java:47)
+	... 1 more

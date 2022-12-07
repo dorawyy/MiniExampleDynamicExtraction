@@ -1,0 +1,2 @@
+myClasses.TestB,myClasses.A,2 # NOTE THIS DEPENDENCY SHOULD BE FILTERED OUT. 
+myClasses.A,myClasses.B,11

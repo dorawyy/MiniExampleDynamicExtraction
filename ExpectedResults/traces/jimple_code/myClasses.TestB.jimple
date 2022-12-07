@@ -1,0 +1,36 @@
+public class myClasses.TestB extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        myClasses.TestB this;
+
+        this := @this: myClasses.TestB;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void testsB()
+    {
+        myClasses.A $stack3;
+        int $stack4;
+        long $stack5;
+        myClasses.TestB this;
+
+        this := @this: myClasses.TestB;
+
+        $stack3 = new myClasses.A;
+
+        specialinvoke $stack3.<myClasses.A: void <init>()>();
+
+        $stack4 = virtualinvoke $stack3.<myClasses.A: int printAandB()>();
+
+        $stack5 = (long) $stack4;
+
+        staticinvoke <org.junit.Assert: void assertEquals(long,long)>(0L, $stack5);
+
+        return;
+    }
+}

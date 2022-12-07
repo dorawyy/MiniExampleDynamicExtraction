@@ -1,0 +1,28 @@
+public class myClasses.B extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        myClasses.B this;
+
+        this := @this: myClasses.B;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public int print()
+    {
+        java.io.PrintStream $stack1;
+        myClasses.B this;
+
+        this := @this: myClasses.B;
+
+        $stack1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack1.<java.io.PrintStream: void println(java.lang.String)>("Hi, this is B");
+
+        return 0;
+    }
+}
