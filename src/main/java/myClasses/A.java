@@ -2,14 +2,17 @@ package myClasses;
 
 public class A {
 
-    private B b = new B();
+    private B b = new B(); // field dep from A to B
 
-    public int printAandB() {
+    public int printA() {
         System.out.println("Hi, this is A");
-        // counting the number of method instances.
-        for (int i = 0; i < 10; i++) {
-            b.print();
-        }
+        b.printB();
         return 0;
+    }
+
+    public int print(B b1, B b2) {
+        b1.printB(); 
+        b2.printB();
+        return 1;
     }
 }
